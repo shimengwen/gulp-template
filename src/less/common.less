@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pd10 {
+    padding-bottom: 10px;
+}
+
+.pd20 {
+    padding-bottom: 20px;
+}
+
+.cdc-page {
+    padding: 50px 0;
+}
+
+
+/*header*/
+
+.cdc-menu {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 11;
+    transition: padding .5s ease, background .5s linear;
+}
+.cdc-logo{
+    img{
+        height: 60px;
+    }
+}
+.cdc-menu-warp {
+    padding-bottom: 10px;
+    ul {
+        list-style: none;
+        li {
+            float: left;
+            margin-left: 60px;
+            a,
+            span {
+                position: relative;
+                display: inline-block;
+                height: 50px;
+                padding: 10px 2px 5px 2px;
+                color: #000;
+                text-decoration: none;
+                vertical-align: middle;
+                font-size: 16px;
+                letter-spacing: 1px;
+            }
+            span {
+                padding: 10px 1px 5px;
+            }
+        }
+    }
+    .cdc-menu-list {
+        float: right;
+        display: inline-block;
+        text-align: center;
+        margin-bottom: 0;
+        a:after {
+            display: inline-block;
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #42bfd3;
+            transition: all .3s ease;
+        }
+        a.active {
+            color: #42bfd3;
+            &:after {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+        a:hover:after {
+            opacity: .8;
+            width: 100%;
+        }
+    }
+}
+
+.pho-btn-icon {
+    display: none;
+}
+
+@media (max-width:926px) {
+    .contanier {
+        width: 100%;
+    }
+    .cdc-menu {
+        position: fixed;
+        top: 0;
+        padding: 10px 0;
+        background-color: #FFF;
+        box-shadow: 0 1px 4px 2px rgba(0,0,0,.05);
+    }
+    body{
+        padding-top: 56px;
+    }
+    .cdc-logo {
+        margin-left: 10px;
+        img{
+            height: 50px;
+        }
+    }
+    .cdc-menu-warp {
+        position: absolute;
+        top: 66px;
+        right: 0;
+        display: none;
+        ul {
+            background: #fff;
+            width: 180px;
+            padding: 10px 0;
+            li {
+                float: none;
+                padding: 0 15px;
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+    }
+    .pho-btn-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        span {
+            color: #24acc1;
+            font-size: 26px;
+            padding: 10px 0;
+        }
+    }
+    .cdc-menu-warp {
+        position: absolute;
+        top: 56px;
+        right: 0;
+        display: none;
+        box-shadow: 0 3px 4px 1px rgba(0,0,0,.2);
+    }
+}
+
+
+
+
+/*header end*/
+
+.chuangshu-lunbo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.chuangshu-lunbo .banner {
+    width: 100%;
+    height: 35.78vw;
+    background: url(../img/banner.png) 100% center;
+    background-size: 100%;
+    margin-left: 0;
+}
+
+.chuangshu-lunbo .banner .swiper-container {
+    width: 30.25vw;
+    height: 17.9vw;
+    position: absolute;
+    top: 9.375vw;
+    right: 20.833vw;
+}
+
+@media (max-width: 768px) {
+    .chuangshu-lunbo .banner .login {
+        margin-left: 15px;
+    }
+}
+
+.footer {
+    height: 100%;
+    width: 100%;
+    background: #42546a;
+    color: #FFF;
+    .email {
+        color: #9aa4b0;
+        text-decoration: none;
+    }
+    .edc-contact{
+        margin-left: 20px;
+    }
+    .footer-logo{
+        width: 200px;
+        margin-top: -20px;
+    }
+    .erweima{
+        width: 128px;
+    }
+}
+
+.edc-left {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+.edc-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9aa4b0;
+}
+
+@media (max-width: 768px) {
+    .edc-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .edc-right {
+        display: block;
+        text-align: center;
+    }
+    .join {
+        padding-top: 20px;
+    }
+    .footer {
+        .edc-contact{
+            margin-left: 0;
+        }
+    }
+}
+
+.copyright {
+    background: #39485c;
+    color: #9aa4b0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
