@@ -1,264 +1,406 @@
-* {
+/*common css*/
+
+
+/*
+html5doctor.com Reset Stylesheet
+v1.4.1
+2010-03-01
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    width: 100%;
-    height: 100%;
+    line-height: 1;
+}
+
+:focus {
+    outline: 1;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
 }
 
 ul li {
     list-style: none;
+}
+
+*,
+html,
+body {
+    font-family: "Microsoft YaHei", 微软雅黑, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu;
+    font-size: 14px;
+    color: #5b5b5c;
+}
+
+
+/*字体集*/
+
+.ff1 {
+    font-family: "Microsoft YaHei", 微软雅黑, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu;
+}
+
+
+/*字体大小集*/
+
+.fs12 {
+    font-size: 12px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+
+/* 清除浮动*/
+
+.clearfix:after,
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/*左右浮动*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/*块级内联*/
+
+.db {
+    display: block;
+}
+
+.dib {
     display: inline-block;
-    cursor: pointer;
 }
 
-p {
-    margin-bottom: 0;
+
+/*对其方式*/
+
+.tac {
+    text-align: center;
 }
 
-a {
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+
+/* 两端对齐 eg. <div class="justify">对齐<span></span></div>*/
+
+.justify {
+    text-align: justify;
+}
+
+.justify>span {
+    display: inline-block/* Opera */
+    ;
+    padding-left: 100%;
+}
+
+
+/*段落换行规则*/
+
+
+/*内容不换行*/
+
+.all-dw {
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+
+/*全部换行*/
+
+.all-lf {
+    overflow: hidden;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+/*中文换行*/
+
+.zh-lf {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+/*溢出省略，需要宽度支持*/
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.t-c {
+    text-align: center;
+}
+
+.t-l {
+    text-align: left;
+}
+
+.t-r {
+    text-align: right;
+}
+
+.m-c {
+    margin: 0 auto;
+}
+
+
+/* link 默认不使用text-decoration*/
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
     text-decoration: none;
 }
 
-.pd10 {
-    padding-bottom: 10px;
+
+/*需要用到的颜色*/
+
+.red {
+    color: red;
 }
 
-.pd20 {
-    padding-bottom: 20px;
-}
-
-.cdc-page {
-    padding: 50px 0;
-}
-
-
-/*header*/
-
-.cdc-menu {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 11;
-    transition: padding .5s ease, background .5s linear;
-}
-.cdc-logo{
-    img{
-        height: 60px;
-    }
-}
-.cdc-menu-warp {
-    padding-bottom: 10px;
-    ul {
-        list-style: none;
-        li {
-            float: left;
-            margin-left: 60px;
-            a,
-            span {
-                position: relative;
-                display: inline-block;
-                height: 50px;
-                padding: 10px 2px 5px 2px;
-                color: #000;
-                text-decoration: none;
-                vertical-align: middle;
-                font-size: 16px;
-                letter-spacing: 1px;
-            }
-            span {
-                padding: 10px 1px 5px;
-            }
-        }
-    }
-    .cdc-menu-list {
-        float: right;
-        display: inline-block;
-        text-align: center;
-        margin-bottom: 0;
-        a:after {
-            display: inline-block;
-            content: '';
-            width: 0;
-            height: 3px;
-            background: #42bfd3;
-            transition: all .3s ease;
-        }
-        a.active {
-            color: #42bfd3;
-            &:after {
-                opacity: 1;
-                width: 100%;
-            }
-        }
-        a:hover:after {
-            opacity: .8;
-            width: 100%;
-        }
-    }
-}
-
-.pho-btn-icon {
-    display: none;
-}
-
-@media (max-width:926px) {
-    .contanier {
-        width: 100%;
-    }
-    .cdc-menu {
-        position: fixed;
-        top: 0;
-        padding: 10px 0;
-        background-color: #FFF;
-        box-shadow: 0 1px 4px 2px rgba(0,0,0,.05);
-    }
-    body{
-        padding-top: 56px;
-    }
-    .cdc-logo {
-        margin-left: 10px;
-        img{
-            height: 50px;
-        }
-    }
-    .cdc-menu-warp {
-        position: absolute;
-        top: 66px;
-        right: 0;
-        display: none;
-        ul {
-            background: #fff;
-            width: 180px;
-            padding: 10px 0;
-            li {
-                float: none;
-                padding: 0 15px;
-                width: 100%;
-                text-align: center;
-                margin-left: 0;
-            }
-        }
-    }
-    .pho-btn-icon {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        span {
-            color: #24acc1;
-            font-size: 26px;
-            padding: 10px 0;
-        }
-    }
-    .cdc-menu-warp {
-        position: absolute;
-        top: 56px;
-        right: 0;
-        display: none;
-        box-shadow: 0 3px 4px 1px rgba(0,0,0,.2);
-    }
+.required {
+    color: red
 }
 
 
+/*公共的最小宽度*/
 
-
-/*header end*/
-
-.chuangshu-lunbo {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 0;
+.min960 {
+    min-width: 960px;
 }
 
-.chuangshu-lunbo .banner {
-    width: 100%;
-    height: 35.78vw;
-    background: url(../img/banner.png) 100% center;
-    background-size: 100%;
-    margin-left: 0;
+.min1000 {
+    min-width: 100px;
 }
 
-.chuangshu-lunbo .banner .swiper-container {
-    width: 30.25vw;
-    height: 17.9vw;
+
+/*虚线分隔线*/
+
+.hr-line-dashed {
+    border-top: 1px dashed #e7eaec;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 2px 0;
+}
+
+
+/*loading*/
+
+#loading {
     position: absolute;
-    top: 9.375vw;
-    right: 20.833vw;
-}
-
-@media (max-width: 768px) {
-    .chuangshu-lunbo .banner .login {
-        margin-left: 15px;
-    }
-}
-
-.footer {
-    height: 100%;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #42546a;
-    color: #FFF;
-    .email {
-        color: #9aa4b0;
-        text-decoration: none;
+    height: 100%;
+    z-index: 9999;
+    background-color: #F2F2F2;
+    .load-area {
+        width: 30%;
+        height: 46%;
+        margin: 0 auto;
+        position: relative;
     }
-    .edc-contact{
-        margin-left: 20px;
-    }
-    .footer-logo{
-        width: 200px;
-        margin-top: -20px;
-    }
-    .erweima{
-        width: 128px;
-    }
-}
 
-.edc-left {
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    flex-direction: column;
-}
-
-.edc-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #9aa4b0;
-}
-
-@media (max-width: 768px) {
-    .edc-left {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    .edc-right {
+    #LoadNUM {
+        position: absolute;
+        bottom: 8%;
+        left: 0;
         display: block;
+        width: 100%;
         text-align: center;
+        font-size: 2.7rem
     }
-    .join {
-        padding-top: 20px;
-    }
-    .footer {
-        .edc-contact{
-            margin-left: 0;
-        }
-    }
-}
-
-.copyright {
-    background: #39485c;
-    color: #9aa4b0;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
 }

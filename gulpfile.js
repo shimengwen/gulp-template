@@ -91,22 +91,6 @@ gulp.task('html', function() {
         .pipe(inject(gulp.src(['./dist/js/common.min.js', './dist/css/common.min.css'], { read: false }), {
             relative: true
         }))
-        .pipe(inject(gulp.src(['./dist/js/index.min.js', './dist/css/index.min.css'], { read: false }), {
-            name: 'index',
-            relative: true
-        }))
-        .pipe(inject(gulp.src(['./dist/js/register.min.js', './dist/css/register.min.css'], { read: false }), {
-            name: 'register',
-            relative: true
-        }))
-        .pipe(inject(gulp.src(['./dist/css/buy.min.css'], { read: false }), {
-            name: 'buy',
-            relative: true
-        }))
-        .pipe(inject(gulp.src(['./dist/js/login.min.js', './dist/css/login.min.css'], { read: false}), {
-            name: 'login',
-            relative: true
-        }))
         .pipe(gulp.dest('dist'))
         .pipe(notify({
             message: 'inject task complete'
